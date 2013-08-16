@@ -1,0 +1,101 @@
+\documentclass{article}
+\usepackage{fullpage}
+\usepackage{threeparttable}
+\usepackage{color}
+
+% \newcommand{\name}[num]{definition}
+
+\newcommand{\wideline}[1]{
+   #1
+   & \multicolumn{3}{c||}{}
+   & \multicolumn{3}{c||}{}
+   & \multicolumn{3}{c||}{}
+   & \multicolumn{3}{c||}{}
+   & \multicolumn{3}{c||}{}
+& \multicolumn{3}{c||}{}}
+
+
+\newcommand{\beginreqs}{\begin{threeparttable}
+\begin{tabular}{|l|
+|c|c|c|
+|c|c|c|
+|c|c|c|
+|c|c|c|
+|c|c|c|
+|c|c|c|
+|
+}
+   \hline
+   \wideline{ Datum} \\
+   \wideline{} \\ \hline\hline}
+
+\newcommand{\req}[1]{#1
+&&&
+&&&
+&&&
+&&&
+&&&
+&&&
+\\\hline}
+\newcommand{\reqsend}[1]{\end{tabular}\begin{tablenotes}
+      #1
+\end{tablenotes}\end{threeparttable}
+
+\bigskip
+\begin{tabular}{||c|c|c||r}
+   \cline{1-3}
+   X & & & Krav uppfyllt \\
+   \cline{1-3}
+   & X & & Krav delvis uppfyllt \\
+   \cline{1-3}
+   & & X & Krav ej uppfyllt \\
+   \cline{1-3}
+\end{tabular}}
+
+
+\begin{document}
+\pagenumbering{gobble}
+\section*{Badrum}
+
+\beginreqs
+\req{Toaletten {\"a}r ren}
+\req{Inventarierna {\"a}r  hela}
+\req{Inga saker ligger p{\aa} golvet \tnote{1}}
+\req{Pappersh{\aa}llaren {\"ar} blank, utan r{\"a}nder}
+\req{Det finns minst tre rullar toapapper}
+\req{V{\aa}gen {\"a}r  blank med fungerande batteri}
+\req{Inget h{\aa}r/ludd finns i duschen}
+\req{Inget on{\"o}digt finns i badrumssk{\aa}pet}
+\req{Badrumssk{\aa}pet {\"a}r fl{\"a}ck- och dammfritt}
+\req{Spegeln {\"a}r  blank utan r{\"a}nder}
+\req{Vaskproppen ligger blank ovanp{\aa} sk{\aa}pet}
+\req{Lampan {\"a}r  fungerande och dammfri}
+\req{Duschhylla, -st{\aa}ng, -slang, -blandare  {\"a}r rena}
+\req{Duschcreme finns p{\aa} blandare}
+\req{Schampoo/balsam finns p{\aa} duschhylla \tnote{2}}
+\req{Handfatet {\"a}r rent \tnote{3}}
+\req{Inget utom tv{\aa}l  {\"a}r p{\aa} handfatet \tnote{2}}
+\req{S{\"a}llan nyttjat l{\"a}ngst upp i sk{\aa}pet}
+\req{H{\aa}rsaker i botten av sk{\aa}pet}
+\req{Inget h{\aa}r i h{\aa}rborsten}
+\req{Tandkr{\"a}m/deo finns p{\aa} mittenhyllan \tnote{2}}
+\req{Papperskorgen {\"a}r ren, med plats kvar i}
+\req{Golvet {\"a}r fl{\"a}ck- och dammfritt}
+\req{Kaklet {\"a}r blankt}
+\req{Handdukskrokarna {\"a}r  blanka}
+\req{Handdukar {\"a}r  torra eller p{\aa} tork, ej smutsiga}
+\req{Draperiet {\"a}r  rent}
+\req{Det finns plats i tv{\"a}ttkorgarna}
+\req{Blandarvreden sitter inte fast}
+\req{Ren torktrasa under handfat}
+\reqsend{
+   \item[1]
+Utom WC-anka, borste, v{\aa}g, tv{\"a}tt- och papperskorg.
+   \item[2]
+Om mindre {\"a}n halvfull skall refill finnas ovanp{\aa} badrumssk{\aa}pet.
+   \item[3]
+Under och bakom handfat, i breddavlopp, under och bakom blandare.
+}
+
+\end{document}
+
